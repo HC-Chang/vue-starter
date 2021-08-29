@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9 - float</title>
+    <style type="text/css>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .float-img{
+            float: left;
+            margin: 0px 20px 10px 0px;
+        }
+
+        .container{
+            width: 960px;
+            background-color: blanchedalmond;
+            margin: auto;
+        }
+        .col{
+            width: 300px;
+            margin: 10px;
+            height: 200px;
+            background-color: #ccc;
+            float: left;
+        }
+        .clear-block{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://fakeimg.pl/250x150/aaaaaa/000" class="float-img">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, error. Reiciendis suscipit sapiente corporis sint, cumque assumenda necessitatibus eaque amet doloribus, aspernatur id nostrum! Debitis voluptas odit maiores accusantium ratione.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus esse voluptate unde saepe atque vitae, harum provident, deserunt dolorem odio quos optio. Fuga, fugit itaque deserunt officiis deleniti eligendi quibusdam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere reprehenderit repudiandae voluptates odio vel vitae voluptatem repellat dolor. Inventore praesentium, officiis nemo autem iure consequatur magnam obcaecati cum ipsum et?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt in aperiam modi delectus voluptas explicabo, voluptatibus adipisci impedit vel odio perferendis veniam magnam, consequuntur nihil magni placeat aliquid nulla a.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus pariatur vero explicabo adipisci quae tenetur molestias fugit sed. Quisquam cum voluptatem omnis distinctio repellat ullam officia. Voluptates pariatur deserunt nobis.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga quaerat in atque temporibus, voluptas sunt reprehenderit odit possimus delectus nostrum vero ullam quidem eius quod esse quasi exercitationem est. Molestiae.</p>
+    </div>
+            
+    <div class="container">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="clear-block"></div>
+    </div>
+    </body>
+</html>

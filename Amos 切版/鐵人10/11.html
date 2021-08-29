@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 11 - box model</title>
+    <style type="text/css>
+        .test1{
+            width: 300px;
+            background-color: #fa0;
+            border: 10px solid #f00;
+            padding: 10px;
+            /* box-sizing 寬度指定 */
+            /* box-sizing: content-box; */
+            box-sizing: border-box;
+        }
+        .wrap{
+            width: 960px;
+            margin: auto;
+            background-color: #ffa;
+        }
+        .clear-fix{
+            width: 100px;
+            clear: both;
+        }
+        .item{
+            width: 274px;
+            /* width: 300px; */
+            margin: 10px;
+            padding: 10px;
+            /* box-sizing: border-box; */
+            border: 3px double #aaa;
+            background-color: #fff;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="test1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, autem rem, odit ab quidem sapiente ipsa labore eaque blanditiis aliquid exercitationem vero accusamus eveniet ea ut consectetur dolorum illum dicta.</div>
+    <div class="wrap">
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui suscipit esse accusantium quasi quos rem, vitae sint? Voluptas, amet quidem esse rem, cupiditate commodi saepe consectetur at ullam hic nihil?</div>
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui suscipit esse accusantium quasi quos rem, vitae sint? Voluptas, amet quidem esse rem, cupiditate commodi saepe consectetur at ullam hic nihil?</div>
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui suscipit esse accusantium quasi quos rem, vitae sint? Voluptas, amet quidem esse rem, cupiditate commodi saepe consectetur at ullam hic nihil?</div>
+        <div class="clear-fix"></div>
+    </div>
+</body>
+</html>

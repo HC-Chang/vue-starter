@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 20 - 媒體查詢</title>
+    <style type="text/css">
+        /* 小螢幕 */
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .demo {
+            width: 100%;
+            height: 200px;
+            background-color: #aaa;
+        }
+
+        .block1 {
+            background-color: #faa;
+        }
+
+        .block2 {
+            background-color: #aaf;
+        }
+
+        .block3 {
+            display: none;
+        }
+
+        /* 大螢幕 */
+        @media screen and (min-width: 768px) {
+            .demo {
+                width: 50%;
+                float: left;
+            }
+
+            .block1 {
+                background-color: #aaf;
+            }
+
+            .block2 {
+                background-color: #faa;
+            }
+
+            .block3 {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo block1">block1</div>
+    <div class="demo block2">block2</div>
+    <div class="demo block3">block3</div>
+</body>
+
+</html>

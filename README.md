@@ -18,7 +18,7 @@ vue create "project name"
         - submit
         - keydown
         - keyup
-        - 
+        
     - v-bind
     - v-if
     - v-for
@@ -46,7 +46,7 @@ export default {
   },
   methods: {
     greet() {
-      alert('Hello I am Danny')
+      alert('Hello')
     }
   }
 };
