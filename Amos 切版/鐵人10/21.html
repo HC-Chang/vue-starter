@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 21 - RWD</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .wrap {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto    ;
+        }
+
+        .item {
+            background-color: #ffa;
+            margin: 0 10px 20px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .wrap {
+                display: flex;
+            }
+            .item{
+                width: 33.33333%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="item">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore non sunt placeat, facere asperiores
+                dolores omnis. Pariatur magni quisquam dolorum nisi amet id, laboriosam, culpa repellat, nihil minima
+                quis porro!</p>
+        </div>
+        <div class="item">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore non sunt placeat, facere asperiores
+                dolores omnis. Pariatur magni quisquam dolorum nisi amet id, laboriosam, culpa repellat, nihil minima
+                quis porro!</p>
+        </div>
+        <div class="item">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore non sunt placeat, facere asperiores
+                dolores omnis. Pariatur magni quisquam dolorum nisi amet id, laboriosam, culpa repellat, nihil minima
+                quis porro!</p>
+        </div>
+    </div>
+</body>
+
+</html>
