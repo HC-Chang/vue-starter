@@ -52,3 +52,10 @@ transform: translateY(0px);
 
 - transition: 屬性 轉換時間 延遲執行時間 速度
 - animation
+
+- 橫排
+display: flex;
+- 直排
+display: flex;
+flex-direction: column;
+justify-content: center;
