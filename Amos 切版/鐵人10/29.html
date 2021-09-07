@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 29 - JQuery 動畫</title>
+    <style type="text/css">
+
+
+        .controller {
+            display: block;
+            padding: 6px 10px;
+            background-color: #000;
+            color: #fff;
+            width: 300px;
+            text-decoration: none;
+        }
+
+        .text.control {
+            width: 300px;
+            padding: 10px;
+            background-color: #ccc;
+        }
+
+        .text.control.close {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <a href="#" class="controller controller1">開/關</a>
+    <div class="text control text1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia labore architecto amet. Ex expedita id,
+        doloremque dolorem soluta laudantium, animi, mollitia sunt quisquam quo quod eveniet possimus. Delectus, dolorem
+        ea.
+    </div>
+
+    <a href="#" class="controller controller2">開/關</a>
+    <div class="text control text2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia labore architecto amet. Ex expedita id,
+        doloremque dolorem soluta laudantium, animi, mollitia sunt quisquam quo quod eveniet possimus. Delectus, dolorem
+        ea.
+    </div>
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // $('.controller').click(function () {
+            //     $('.text.control').toggleClass('close');
+            // })
+            $('.controller1').click(function () {
+                $('.text1').slideToggle('close');
+            })
+            $('.controller2').click(function () {
+                $('.text2').fadeToggle('close');
+            })
+
+        })
+    </script>
+</body>
+
+</html>

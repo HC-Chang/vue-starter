@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 28 - JQuery CSS控制</title>
+    <style type="text/css">
+        .box-a {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            background-color: #aaa;
+        }
+
+        .box-b {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            background-color: #faa;
+        }
+
+        .product-title {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .full-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            background: rgba(0, 0, 0, .5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .full-screen.x {
+            display: none;
+        }
+
+        .full-screen .text {
+            width: 90%;
+            max-width: 500px;
+            height: 80%;
+            background: #fff;
+            padding: 20px;
+            position: relative;
+        }
+
+        .full-screen .text .btn-close {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: #f00;
+            color: #fff;
+            text-decoration: none;
+            top: -15px;
+            right: -15px;
+            border-radius: 50%;
+        }
+
+        .controller {
+            display: block;
+            padding: 6px 10px;
+            background-color: #000;
+            color: #fff;
+            width: 300px;
+            text-decoration: none;
+        }
+
+        .text.control {
+            width: 300px;
+            padding: 10px;
+            background-color: #ccc;
+        }
+
+        .text.control.close {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box-a">box-a</div>
+    <div class="box-b">box-b</div>
+
+    <div class="product-title">產品介紹</div>
+
+    <div class="content">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, possimus repellat voluptatem sequi at consectetur
+        excepturi adipisci accusantium sed quibusdam modi, illo a nobis suscipit delectus laboriosam repellendus
+        recusandae sunt.
+    </div>
+
+    <a href="#" class="btn-open">open</a>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis molestias ad dolor possimus eveniet, asperiores
+        recusandae rerum voluptates expedita consectetur assumenda dolore iure et. Fugiat ducimus fuga neque inventore
+        perferendis.</p>
+    <p>Possimus commodi porro, sint ut rem, numquam magni dicta nostrum explicabo voluptatum accusamus soluta animi eius
+        eveniet vitae aperiam, nisi eos laudantium ipsum quibusdam distinctio expedita obcaecati. Voluptas, ullam cum.
+    </p>
+    <p>Fuga, perferendis perspiciatis impedit corrupti voluptatem maiores quod dolorem? Nemo repellat, laboriosam
+        eligendi asperiores ut ducimus expedita rem deleniti vero magni, quibusdam corrupti aliquid illum magnam quas,
+        nisi quaerat sint?</p>
+    <p>Maiores est esse, vero similique soluta ea laboriosam nisi nam dolore veritatis enim sint autem iure velit modi
+        voluptates numquam animi at vitae beatae perspiciatis sunt consectetur cupiditate. Accusamus, excepturi!</p>
+    <p>Voluptas, accusamus doloremque doloribus repellat vel eos, commodi odit ipsa sint incidunt porro, obcaecati
+        optio. In incidunt accusantium repellat dolorum laudantium voluptatem possimus. Ipsa accusamus atque nemo
+        quaerat? Odit, quo.</p>
+    <p>Libero quae optio totam dolorem et praesentium, tempora debitis, consequuntur ad tempore doloribus reprehenderit
+        odit officiis sunt? Veritatis repellendus, magnam laboriosam adipisci nemo numquam quaerat molestiae, et enim
+        incidunt ipsa!</p>
+    <p>Repudiandae minima obcaecati perspiciatis quam necessitatibus velit non facilis eveniet. Nisi temporibus dolorum
+        asperiores, aspernatur inventore consectetur rerum beatae ut, amet quis, sapiente quidem. Laborum ad excepturi
+        vero deserunt tempore.</p>
+    <p>Blanditiis voluptas dicta vitae voluptatibus provident ad odio amet dignissimos eos necessitatibus culpa et
+        deserunt, ducimus quasi earum quas nisi voluptate! Vero corrupti magnam culpa hic qui, dolorem voluptas velit.
+    </p>
+    <p>Totam cum, perspiciatis repellat laboriosam, itaque ratione cumque nulla minima voluptates quia consequatur
+        saepe? Rerum nisi ab quae assumenda iste consequatur aperiam repellendus, nihil culpa at vitae ea architecto
+        nam?</p>
+    <p>Ullam quos, animi blanditiis impedit mollitia molestias suscipit nam iure hic consequuntur natus? Maiores a ut
+        cum, delectus, ab eos id dolorem, impedit quia deserunt repudiandae voluptatem enim dolores eum.</p>
+    <p>Suscipit vel libero beatae odit, laboriosam quasi impedit itaque quisquam sint eos dignissimos illo laudantium
+        assumenda sit dicta inventore maiores optio exercitationem nisi facilis nulla aliquam totam! Voluptatibus, dolor
+        rem.</p>
+    <p>Rem, eum totam! Doloremque libero mollitia repellat dolorem esse consequatur enim. Aspernatur quos fugiat omnis
+        delectus, quibusdam nostrum assumenda quidem earum quisquam dolor eum natus consequatur hic, voluptatibus dolore
+        ipsa?</p>
+    <p>Voluptate nostrum architecto placeat sit quisquam. Nulla dolorem qui minima eos ex provident, unde libero
+        accusamus quae fuga vel, vero labore repudiandae eaque odio ipsam veniam! Dolor laboriosam mollitia tenetur.</p>
+    <p>Doloribus corporis laborum saepe, sint perspiciatis dolorum provident minus delectus eveniet. Suscipit, quasi?
+        Dignissimos quis et ut ipsa saepe quidem aperiam magni, dolores dolorem quasi nisi deserunt maiores rem dolore?
+    </p>
+    <p>Ab alias explicabo, placeat exercitationem esse consectetur commodi earum libero velit ratione quam obcaecati
+        excepturi quod necessitatibus reprehenderit dolor ipsa? Esse iusto accusamus dicta quibusdam quos eaque a est
+        eveniet?</p>
+    <p>Et perferendis harum cum quidem dignissimos placeat quisquam ullam consectetur esse aut, itaque dolores? Minima
+        magnam in ipsum molestias, harum laboriosam quas ipsam tempora mollitia eum numquam? Id, laborum voluptas.</p>
+    <p>Officiis maxime omnis harum vitae eligendi qui! Odit, possimus est laborum quod itaque rerum veritatis doloribus
+        sint magni! Aut voluptas, ea dicta consequatur totam eligendi numquam autem maiores doloribus explicabo.</p>
+    <p>Excepturi molestiae temporibus ipsam enim adipisci maxime odit ad incidunt sed iure hic, reiciendis eum minima.
+        Earum magnam, eius et voluptatum esse deserunt iste, perspiciatis, quod praesentium optio incidunt repellat.</p>
+    <p>Placeat repellat odit quas dicta perferendis est vel minus porro earum dolor, soluta fuga magnam, impedit qui
+        animi ea possimus atque nemo cumque nisi explicabo voluptates ipsum et? Facere, suscipit.</p>
+    <p>Nesciunt temporibus dolorem, distinctio totam omnis consequuntur. Error obcaecati, molestias repellendus dolores
+        voluptates, possimus fugit, eligendi omnis officia maxime maiores. Rem rerum molestiae eaque! Magni quibusdam
+        molestias impedit ut quo.</p>
+    <p>Itaque fugit doloribus architecto! Voluptates quaerat repellendus fugiat sint aperiam soluta perspiciatis quia
+        iste earum, nam cum voluptate magni ad harum itaque vitae iure enim maxime molestias, laboriosam minima
+        incidunt.</p>
+    <p>Ipsum sit soluta expedita temporibus, eius assumenda dignissimos ipsa fugiat nostrum maiores beatae corporis
+        mollitia atque ab maxime laborum deserunt harum libero eveniet iste placeat blanditiis iure excepturi
+        laudantium! Ullam.</p>
+    <p>Dignissimos praesentium, velit quisquam totam architecto non, nesciunt veniam quod magnam reiciendis corrupti
+        modi dolores incidunt sed. Ipsa praesentium veritatis accusantium suscipit, odit eligendi! Voluptate excepturi
+        velit aut quas atque.</p>
+    <p>Quo natus quis iusto numquam hic! Suscipit laborum perspiciatis commodi consequatur debitis officia facere, quo
+        doloremque quos facilis ipsam modi obcaecati voluptatem, hic delectus. Hic tenetur sit culpa aperiam dolor.</p>
+    <p>Exercitationem quam odio incidunt beatae molestias veritatis maiores ex ab repellendus, omnis totam! Dolor
+        voluptas cum optio distinctio perspiciatis, minus, nostrum eos iste, dolorem voluptatum maxime quasi quo
+        corrupti molestias?</p>
+    <p>Suscipit nisi praesentium quidem doloremque alias voluptates sed, doloribus neque error eaque maxime, architecto
+        assumenda molestias sequi veritatis ducimus ipsum aut a laudantium harum inventore iusto eius. Quia, quam
+        molestias!</p>
+    <p>Soluta laborum, aliquid voluptates ea enim minus vitae officiis, nisi explicabo placeat voluptatibus quaerat est
+        fugit quod? Dolores, doloremque dicta illum voluptate rerum placeat. Hic assumenda quidem consectetur vero quia.
+    </p>
+    <p>Porro voluptas, quam accusantium est cum recusandae. Error molestias repudiandae, nihil ab saepe quia et adipisci
+        dolorem aspernatur provident quo officia ipsum excepturi ipsa necessitatibus itaque ullam quae dolore. Iure!</p>
+    <p>Amet nemo saepe ratione nulla dignissimos ex! Dolorum voluptas delectus voluptatum fugit maiores ullam impedit
+        iste similique deserunt. Quo fuga illum consectetur. Deserunt, autem. Aspernatur consequatur eaque nulla
+        exercitationem officia.</p>
+    <p>Reprehenderit, esse itaque! Ratione quibusdam ipsa totam? Praesentium sapiente labore eos minus, cupiditate ut
+        soluta dicta accusantium. Harum dolores eius debitis corrupti consequatur aliquid, totam, eum alias omnis
+        doloribus consequuntur!</p>
+
+    <div class="full-screen">
+        <div class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia temporibus accusantium odit officia soluta
+            odio nisi aspernatur provident minus, quis omnis rerum doloremque rem a et beatae, optio quam fuga?
+            <a href="#" class="btn-close">X</a>
+        </div>
+    </div>
+
+
+    <a href="#" class="controller controller1">開/關</a>
+    <div class="text control text1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia labore architecto amet. Ex expedita id,
+        doloremque dolorem soluta laudantium, animi, mollitia sunt quisquam quo quod eveniet possimus. Delectus, dolorem
+        ea.
+    </div>
+
+    <a href="#" class="controller controller2">開/關</a>
+    <div class="text control text2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia labore architecto amet. Ex expedita id,
+        doloremque dolorem soluta laudantium, animi, mollitia sunt quisquam quo quod eveniet possimus. Delectus, dolorem
+        ea.
+    </div>
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".box-a").dblclick(function () {
+                $(".box-b").toggle();
+            })
+
+
+            $(".product-title").click(function () {
+                $(".content").toggle();
+            })
+
+            $(document).ready(function () {
+                $(".btn-close").click(function () {
+                    // $(".full-screen").hide();
+                    $(".full-screen").addClass('x');
+                })
+            })
+
+            $('.btn-open').click(function () {
+                $(".full-screen").removeClass('x');
+            })
+
+            // $('.controller').click(function () {
+            //     $('.text.control').toggleClass('close');
+            // })
+            $('.controller1').click(function () {
+                $('.text1').toggleClass('close');
+            })
+            $('.controller2').click(function () {
+                $('.text2').toggleClass('close');
+            })
+
+        })
+    </script>
+</body>
+
+</html>
