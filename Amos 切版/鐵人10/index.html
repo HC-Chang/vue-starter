@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contents</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        .header {
+            background-color: #aaa;
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 50px;
+        }
+
+        .wrap {
+            /* width: 100%; */
+            width: 400px;
+            margin: auto;
+        }
+
+        .menu {
+            background-color: #fa0;
+            text-align: center;
+            font-size: 0;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 20px;
+            /* background-color: #f00; */
+            background-color: #fa0;
+            font-size: 16px;
+            transition: 0.5s;
+        }
+
+        .menu a:hover {
+            background-color: #000;
+        }
+
+        .item {
+            /* width: 278px; */
+            width: 178px;
+            margin: 10px;
+            border: #000 solid 1px;
+
+            height: 50px;
+            background-color: #FFEBCD;
+            float: left;
+
+            /* line-height: 42px; */
+            display: inline-block;
+
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .item a {
+            display: block;
+            text-align: left;
+            height: 100%;
+            transition: .5s;
+        }
+
+        .item a::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .item a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .header .text {
+            display: block;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            font-size: 28px;
+        }
+
+        .header .text::before {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .footer {
+            padding: 20px 0;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        @media screen and (min-width:768px) {
+            .wrap {
+                width: 800px;
+            }
+
+            .header .text {
+                display: block;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                font-size: 38px;
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="text">
+            2019鐵人賽 - CSScoke - 金魚系列實作
+        </div>
+    </div>
+
+
+    <div class="wrap">
+        <div class="menu">
+            <a href="https://www.w3schools.com/js/js_htmldom.asp">JavaScript HTML DOM</a>
+            <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS">MDN Web Docs - CSS</a>
+            <a href="https://www.w3schools.com/cssref/default.asp">W3Schools - CSS</a>
+            <a href="https://html5up.net/">HTML5 UP</a>
+            <a href="https://developers.google.com/speed/libraries#jquery">Google Hosted Libraries</a>
+            <a href="https://jquery.com/">jquery</a>
+            <a href="https://getbootstrap.com/">Bootstrap</a>
+        </div>
+    </div>
+
+
+
+    <div class="wrap">
+        <div class="item">
+            <a href="07.html">07 - starter</a>
+        </div>
+        <div class="item">
+            <a href="08.html">08 - 區塊尺寸</a>
+        </div>
+        <div class="item">
+            <a href="09.html">09 - float</a>
+        </div>
+        <div class="item">
+            <a href="10.html">10 - inline、block</a>
+        </div>
+        <div class="item">
+            <a href="11.html">11 - box model</a>
+        </div>
+        <div class="item">
+            <a href="12.html">12 - css reset</a>
+        </div>
+        <div class="item">
+            <a href="13.html">13 - flex</a>
+        </div>
+        <div class="item">
+            <a href="14.html">14 - fixed 定位</a>
+        </div>
+        <div class="item">
+            <a href="15.html">15 - relative 定位</a>
+        </div>
+        <div class="item">
+            <a href="16.html">16 - absolute 定位</a>
+        </div>
+        <div class="item">
+            <a href="17.html">17 - 簡易切版</a>
+        </div>
+        <div class="item">
+            <a href="18.html">18 - transition</a>
+        </div>
+        <div class="item">
+            <a href="19.html">19 - animation</a>
+        </div>
+        <div class="item">
+            <a href="20.html">20 - 媒體查詢</a>
+        </div>
+        <div class="item">
+            <a href="21.html">21 - RWD-1</a>
+        </div>
+        <div class="item">
+            <a href="22.html">22 - RWD-2</a>
+        </div>
+        <div class="item">
+            <a href="23.html">23 - RWD選單</a>
+        </div>
+        <div class="item">
+            <a href="24.html">24 - Bootstrap</a>
+        </div>
+        <div class="item">
+            <a href="25.html">25 - Bootstrap Components</a>
+        </div>
+        <div class="item">
+            <a href="26.html">26 - jquery</a>
+        </div>
+        <div class="item">
+            <a href="27.html">27 - jquery 事件</a>
+        </div>
+        <div class="item">
+            <a href="28.html">28 - jquery CSS控制</a>
+        </div>
+        <div class="item">
+            <a href="29.html">29 - jquery 動畫</a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="footer">
+        &copy; copyright by test
+    </div>
+</body>
+
+</html>
